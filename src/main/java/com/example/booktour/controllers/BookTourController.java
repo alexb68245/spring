@@ -45,6 +45,12 @@ public class BookTourController {
         return ResponseEntity.ok(tour);
     }
 
+    @GetMapping("search/{name}")
+    @ResponseBody
+    public List<Tour> searchToursByName(@PathVariable String name){
+        return tourService.searchToursByName(name);
+    }
+
 
     @DeleteMapping("/delete")
     public ResponseEntity deleteTour(@RequestBody Integer id){

@@ -25,6 +25,10 @@ public class TourService {
         return tourRepository.findTourByName(tourName);
     }
 
+    public List<Tour> searchToursByName(String tourName){
+        return tourRepository.searchByTourName(tourName);
+    }
+
     public Optional getTourById(int id){
         return tourRepository.findById(id);
     }
