@@ -40,7 +40,7 @@ public class BookTourController {
     }
     @GetMapping("{name}")
     @ResponseBody
-    public ResponseEntity<Tour> getTourByName(@RequestBody String name){
+    public ResponseEntity<Tour> getTourByName(@PathVariable String name){
         Tour tour = tourService.getTourByName(name);
         return ResponseEntity.ok(tour);
     }
